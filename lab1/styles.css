@@ -1,0 +1,368 @@
+:root {
+  --bg: #f8f5f1;
+  --surface: #ffffff;
+  --text: #222;
+  --accent: #8b1e3f;
+  --accent-light: #f3d8e1;
+  --dark: #1d1d1d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  background-color: var(--dark);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  transition: background-color 0.25s ease;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  background-color: var(--accent);
+}
+
+.hero {
+  background: linear-gradient(120deg, #2f2f2f, #4a4a4a);
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.hero h2 {
+  margin-top: 0;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.section-block {
+  margin: 2.5rem auto;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+th,
+td {
+  text-align: left;
+padding: 1rem; 
+  border-bottom: 1px solid #ececec;
+}
+
+thead {
+  background-color: var(--accent);
+  color: #fff;
+  border-bottom: 3px solid #fff;
+}
+
+
+tbody tr:hover {
+  background-color: var(--accent-light);
+}
+
+.chef-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  min-height: 260px;
+  border: 0;
+  border-radius: 12px;
+}
+
+.site-footer {
+  background-color: #111;
+  color: #f2f2f2;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+.site-footer p {
+  margin: 0.3rem 0;
+}
+
+/* Адаптація під планшети та мобільні */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-list a {
+    display: inline-block;
+  }
+
+  .menu-cards,
+  .chef-list,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .site-header h1 {
+    font-size: 1.1rem;
+  }
+
+  th,
+  td {
+    padding: 0.7rem;
+  }
+
+  .hero {
+    padding: 2rem 0;
+  }
+}
+
+/* Меню */
+.menu-section {
+  margin-bottom: 4rem;
+}
+
+.category-bar {
+  background-color: var(--accent);
+  color: white;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 0;
+}
+
+/* Картки страв і кухарів */
+.menu-card,
+.chef-card {
+  background: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0.9rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover,
+.chef-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Фото карток */
+.menu-card img {
+  border-radius: 10px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.chef-card img {
+  border-radius: 10px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Текст карток */
+.chef-card h3 {
+  margin: 0.5rem 0;
+  color: var(--dark);
+}
+
+.chef-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+}
+
+.weight {
+  color: #474747;
+  font-size: 0.9rem;
+}
+
+.price {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+/* Сітка карток меню */
+.menu-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Футер */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  margin-bottom: 8px;
+}
+
+.social-links a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-light);
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 25px;
+    text-align: left;
+  }
+}
+
+/* Фото головної сторінки */
+.main-photo-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.static-card {
+  background: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.static-card img {
+  width: 100%;
+  aspect-ratio: 21 / 7;
+  object-fit: cover;
+  display: block;
+}
+
+.static-card .card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
