@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veselka — Головна</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1>Ресторан «Veselka»</h1>
+        <nav aria-label="Головна навігація">
+          <ul class="nav-list">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="chefs.html">Наші кухарі</a></li>
+            <li><a href="index.html#about">Про нас</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h2>Ласкаво просимо до ресторану «Veselka»</h2>
+          <p>
+            Авторська кухня, тепла атмосфера та якісні інгредієнти — усе для
+            вашого ідеального відпочинку.
+          </p>
+        </div>
+      </section>
+
+      <section class="container section-block">
+        <div class="main-photo-wrapper">
+          <article class="static-card">
+            <img src="images/veselka.jpg" alt="Інтер'єр ресторану Veselka" />
+            <div class="card-body">
+              <h3>Наш ресторан</h3>
+              <p>Місце, де затишок зустрічається зі смаком.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="container section-block">
+        <article class="static-card">
+          <div class="card-content">
+            <h2>Про наш ресторан</h2>
+
+            <div class="about-grid">
+              <div>
+                <p>
+                  «Veselka» — це ресторан сімейного формату в центрі міста. Ми
+                  готуємо зі свіжих інгредієнтів, дотримуємось високих
+                  стандартів якості та створюємо теплу атмосферу для зустрічей
+                  із рідними та друзями.
+                </p>
+
+                <h3>Наші переваги</h3>
+                <ul>
+                  <li>Сезонне меню та авторські страви</li>
+                  <li>Жива музика щоп'ятниці</li>
+                  <li>Окрема дитяча зона</li>
+                </ul>
+
+                <div class="work-schedule">
+                  <h3>Графік роботи</h3>
+                  <ul
+                    class="schedule-list"
+                    style="list-style: none; padding: 0"
+                  >
+                    <li>
+                      <strong>Понеділок — П'ятниця:</strong> 10:00 - 22:00
+                    </li>
+                    <li><strong>Субота — Неділя:</strong> 09:00 - 23:00</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="map-wrapper">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2384110309176!2d-73.98739502341513!3d40.73038673621453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2599818ed2917%3A0x673f76156e793582!2sVeselka!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua"
+                  width="100%"
+                  height="350"
+                  style="border: 0; border-radius: 12px"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="comments-section">
+              <h3>Залишити відгук</h3>
+              <form id="comment-form">
+                <input
+                  type="text"
+                  id="user-name"
+                  placeholder="Ваше ім'я"
+                  required
+                />
+                <textarea
+                  id="user-comment"
+                  placeholder="Ваш відгук"
+                  rows="4"
+                  required
+                ></textarea>
+                <button type="submit" class="ing-btn">Надіслати відгук</button>
+              </form>
+
+              <div id="reviews-container">
+                <h4>Відгуки відвідувачів:</h4>
+                <ul
+                  id="comments-list"
+                  style="list-style: none; padding: 0"
+                ></ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-left">
+          <p>
+            <strong>Контакти:</strong> 144 2nd Ave, New York, NY 10003,
+            Сполучені Штати
+          </p>
+          <p><strong>Телефон:</strong> +1 256-854-6556</p>
+          <p><strong>Email:</strong> info@smakota.ua</p>
+        </div>
+
+        <div class="footer-right">
+          <p><strong>Ми у соцмережах:</strong></p>
+          <ul class="social-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container copyright">
+        <p>&copy; 2026 Ресторан «Veselka». Усі права захищено.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
